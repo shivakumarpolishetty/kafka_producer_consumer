@@ -9,7 +9,7 @@ import last.one.Entity.Data;
 public class Consumer {
 
        @Autowired
-       private Dmethod dbmethod;
+       public  Dmethod dbmethod;
        //no method or an object need to call this it atomaticaly called by kafka
     @KafkaListener(topics = "apple",groupId = "three")
     public void listen(String message)
