@@ -143,7 +143,7 @@ Kafka UI will be accessible at [http://localhost:8085](http://localhost:8090)
 
 ### 1. Kafka UI
 
-images/ui.png
+https://github.com/shivakumarpolishetty/kafka_producer_consumer/blob/master/images/docker.png
 
 ### 2. Kafka Docker Running
 
