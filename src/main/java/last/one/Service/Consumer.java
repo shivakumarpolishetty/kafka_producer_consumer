@@ -10,7 +10,7 @@ public class Consumer {
 
        @Autowired
        private Dmethod dbmethod;
-       //no method or an object need to call this ..it atomaticaly called by kafka
+       //no method or an object need to call this it atomaticaly called by kafka
     @KafkaListener(topics = "apple",groupId = "three")
     public void listen(String message)
     {
