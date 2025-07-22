@@ -1,0 +1,149 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .secone {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .sectwo {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .producer {
+            width: 40%;
+        }
+
+        .consumer {
+            width: 55%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #666;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eee;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 80%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        .technologies {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    padding: 20px;
+    width: 80%;
+    border-top: 2px solid #ccc;
+    gap: 20px;
+}
+
+.technologies img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.technologies img:hover {
+    transform: scale(1.1);
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="secone">
+    <h3>Kafka Producer and Consumer</h3>
+</div>
+
+<div class="sectwo">
+    <div class="producer">
+        <form action="/sendmessage" method="post">
+            <label>Enter the message:</label><br>
+            <input type="text" name="message" required>
+            <br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div class="consumer">
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Messages</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="msg : ${messages}">
+                <td th:text="${msg.getid()}"></td>
+                <td th:text="${msg.getMessage()}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="technologies">
+    <img  th:src="@{/kafka.png}" alt="kafka">
+    <img  th:src="@{/docker.png}" alt="docker">
+    <img  th:src="@{/springboot.png}" alt="springboot">
+    <img th:src="@{/kafka_UI.png}" alt="kafka ui">
+    <img th:src="@{/leaf.png}" alt="thymeleaf">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
