@@ -1,10 +1,10 @@
 
-````markdown
+
 # 🧵 Spring Boot Kafka Messaging App with H2, Kafka UI, and Thymeleaf
 
 A full-stack messaging application built using **Spring Boot**, **Kafka**, **H2 Database**, and **Thymeleaf**, with **Kafka and Kafka UI** running in **Docker containers**. This project simulates real-time producer-consumer communication using Kafka topics, persisting messages to an H2 database, and displaying them via a responsive Thymeleaf UI.
 
----
+
 
 ## 📌 Features
 
@@ -143,20 +143,20 @@ Kafka UI will be accessible at [http://localhost:8085](http://localhost:8090)
 
 ### 1. Kafka UI
 
-images/ui.png
+![kafka UI](images/ui.png)
 
 
 ### 2. Kafka Docker Running
 
-images/docker.png
+![kafka docker image](images/docker.png)
 
 ### 3. H2 Database Console
 
-images/h2-database.png
+![h2 database image](images/h2-database.png)
 
 ### 4. Thymeleaf Web Page
 
-images/web.png
+![thymeleaf web page](images/web.png)
 
 
 
